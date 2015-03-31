@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>jQuery - Code Carrots JS</title>
+
+  <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+  <meta name="author" content="Hakim El Hattab">
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/sky.css" id="theme">
+
+  <!-- Code syntax highlighting -->
+  <link rel="stylesheet" href="/lib/css/zenburn.css">
+  
+
+  <!-- Printing and PDF exports -->
+  <script>
+   var link = document.createElement( 'link' );
+   link.rel = 'stylesheet';
+   link.type = 'text/css';
+   link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+   document.getElementsByTagName( 'head' )[0].appendChild( link );
+ </script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+          <img src='cc.jpg' height="200" width="200" >
+          <h1>Code Carrots</h1>
+          <h3>Kurs JavaScript - jQuery</h3>
+          <h4>Write less, do more</h4>
+
+          <p>
+            <small><a href="mailto:meksionek@gmail.com">Gosia Ksionek</a></small>
+          </p>
+        </section>
+      
+        <section>
+          <h2>Czym jest jQuery?</h2>
+
+          <p class="fragment roll-in">
+            Biblioteka ułatwiająca operacje na drzewie DOM. 
+          </p>
+          <p class="fragment roll-in">
+            Używamy selektorów CSS do wyboru elementów drzewa DOM. 
+          </p>
+          <p class="fragment roll-in">
+            Uniwersalna dla różnych przeglądarek.
+          </p>
+        </section>
+       <section>
+        <section>
+          <h3>Wybieranie elementu drzewa DOM</h3>
+          <pre>
+              <code >
+                $('li.list')
+              </code>
+          </pre>
+          <h4>Wybieranie elementu drzewa DOM i dodawanie mu klasy</h4>
+
+          <pre>
+            <code class = 'javascript'>
+              $('li.list').addClass('complete7')              
+            </code>
+          </pre>
+
+        </section>
+        <section>
+          <h3>Wybieranie elementu drzewa DOM za pomocą id</h3>
+          <pre>
+              <code >
+                $("#first_button")
+              </code>
+          </pre>
+          <h4>Wybieranie elementu drzewa DOM za pomocą id i dodawanie mu stylów CSS</h4>
+
+          <pre>
+              <code >
+                $("#first_button").css('background-color', 'yellow')
+              </code>
+          </pre>
+
+        </section>
+
+      </section>
+
+        <section>
+          <h3>Zmiana zawartości</h3>
+          <pre>
+              <code >
+                $('div:first').text('Tu zmieniam tekst')
+              </code>
+          </pre>
+
+        </section>
+
+     
+         <section>
+          <h3>Najprostsze wydarzenia</h3>
+          <pre>
+              <code >
+                $('li').on('click', function(){
+                  $(this).css('color', 'red')
+                })
+              </code>
+          </pre>
+          
+
+        </section>
+</div>
+
+</div>
+<script src='zadania.js'></script>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+       { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+       { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+       { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+       { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+       { src: 'plugin/zoom-js/zoom.js', async: true },
+       { src: 'plugin/notes/notes.js', async: true }
+       ]
+     });
+
+		</script>
+
+	</body>
+  </html>
